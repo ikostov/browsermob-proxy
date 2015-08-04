@@ -317,6 +317,7 @@ public class BrowserMobProxyServer implements BrowserMobProxy, LegacyProxyServer
                         return getMaximumResponseBufferSize();
                     }
                 })
+                .withTransparent(true)
                 .withServerResolver(delegatingResolver)
                 .withAddress(clientBindSocket)
                 .withConnectTimeout(connectTimeoutMs)
